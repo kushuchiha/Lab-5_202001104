@@ -200,5 +200,7 @@ Interpretation:
 6)unnecessary else in line 432 since we used return in above line so it doesn't do anything
 7)Standard Function Naming convention of Snake_case was not observed for few functions
 
-Overall quality of code was pretty poor
+Overall quality of code-checking was pretty poor since it gave 100 lines of code of error when most of them were basic suggestions on how you should type function names and variable names
+Thus overall deduction of errors in code reduces drastically due to unnecessary warnings
+
 
