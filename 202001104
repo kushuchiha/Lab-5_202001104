@@ -1,0 +1,204 @@
+# Lab-5_202001104
+
+Github Clone Link:https://github.com/sourabhv/FlapPyBird.git
+
+Tool Used:Pylint
+
+Brief Overview of the project: Flappy bird game in Python
+
+
+Steps I performed:
+
+Opened Command Prompt and installed Pylint using command pip install Pylint
+Navigated to the folder containing my cloned project
+Ran the command py -m pylint <file_name>
+
+I executed this for my setup.py and got this output:
+************* Module setup
+setup.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+setup.py:3:0: W4901: Deprecated module 'distutils.core' (deprecated-module)
+setup.py:5:0: E0401: Unable to import 'py2exe' (import-error)
+setup.py:8:0: C0116: Missing function or method docstring (missing-function-docstring)
+setup.py:8:0: C0103: Function name "isSystemDLL" doesn't conform to snake_case naming style (invalid-name)
+
+
+Interpretation:
+->The module currently being used in this file is deprecated and newer more refined models are available which should have been used
+
+->Importing module “py2exe” failed 
+
+->Standard Naming convention for function was not observed for function “isSystemDLL”
+
+
+Then I executed this for my flappy.py and got this output:
+Note this was my main file so is pretty long:
+
+************* Module flappy
+flappy.py:314:0: C0303: Trailing whitespace (trailing-whitespace)
+flappy.py:374:0: C0303: Trailing whitespace (trailing-whitespace)
+flappy.py:391:0: W0311: Bad indentation. Found 9 spaces, expected 8 (bad-indentation)
+flappy.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+flappy.py:4:0: E0401: Unable to import 'pygame' (import-error)
+flappy.py:5:0: E0401: Unable to import 'pygame.locals' (import-error)
+flappy.py:5:0: W0401: Wildcard import pygame.locals (wildcard-import)
+flappy.py:51:4: E0601: Using variable 'xrange' before assignment (used-before-assignment)
+flappy.py:53:4: C0103: Class name "xrange" doesn't conform to PascalCase naming style (invalid-name)
+flappy.py:56:0: C0116: Missing function or method docstring (missing-function-docstring)
+flappy.py:57:4: W0601: Global variable 'SCREEN' undefined at the module level (global-variable-undefined)
+flappy.py:57:4: W0601: Global variable 'FPSCLOCK' undefined at the module level (global-variable-undefined)
+flappy.py:86:8: C0103: Variable name "soundExt" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:88:8: C0103: Variable name "soundExt" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:98:8: C0103: Variable name "randBg" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:102:8: C0103: Variable name "randPlayer" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:130:8: C0103: Variable name "movementInfo" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:131:8: C0103: Variable name "crashInfo" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:135:0: C0103: Function name "showWelcomeAnimation" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:138:4: C0103: Variable name "playerIndex" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:139:4: C0103: Variable name "playerIndexGen" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:141:4: C0103: Variable name "loopIter" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:151:4: C0103: Variable name "baseShift" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:154:4: C0103: Variable name "playerShmVals" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:158:29: E0602: Undefined variable 'QUIT' (undefined-variable)
+flappy.py:158:52: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:158:77: E0602: Undefined variable 'K_ESCAPE' (undefined-variable)
+flappy.py:161:29: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:161:42: R1714: Consider merging these comparisons with 'in' by using 'event.key in (K_SPACE, K_UP)'. Use a set instead if elements are hashable. (consider-using-in)
+flappy.py:161:55: E0602: Undefined variable 'K_SPACE' (undefined-variable)
+flappy.py:161:79: E0602: Undefined variable 'K_UP' (undefined-variable)
+flappy.py:172:12: C0103: Variable name "playerIndex" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:173:8: C0103: Variable name "loopIter" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:188:0: C0116: Missing function or method docstring (missing-function-docstring)
+flappy.py:188:0: C0103: Function name "mainGame" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:188:13: C0103: Argument name "movementInfo" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:188:0: R0914: Too many local variables (35/15) (too-many-locals)
+flappy.py:189:12: C0103: Variable name "playerIndex" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:189:26: C0103: Variable name "loopIter" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:190:4: C0103: Variable name "playerIndexGen" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:194:4: C0103: Variable name "baseShift" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:197:4: C0103: Variable name "newPipe1" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:198:4: C0103: Variable name "newPipe2" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:201:4: C0103: Variable name "upperPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:207:4: C0103: Variable name "lowerPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:212:4: C0103: Variable name "dt" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:213:4: C0103: Variable name "pipeVelX" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:216:4: C0103: Variable name "playerVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:217:4: C0103: Variable name "playerMaxVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:218:4: C0103: Variable name "playerMinVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:219:4: C0103: Variable name "playerAccY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:220:4: C0103: Variable name "playerRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:221:4: C0103: Variable name "playerVelRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:222:4: C0103: Variable name "playerRotThr" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:223:4: C0103: Variable name "playerFlapAcc" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:224:4: C0103: Variable name "playerFlapped" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:229:29: E0602: Undefined variable 'QUIT' (undefined-variable)
+flappy.py:229:52: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:229:77: E0602: Undefined variable 'K_ESCAPE' (undefined-variable)
+flappy.py:232:29: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:232:42: R1714: Consider merging these comparisons with 'in' by using 'event.key in (K_SPACE, K_UP)'. Use a set instead if elements are hashable. (consider-using-in)
+flappy.py:232:55: E0602: Undefined variable 'K_SPACE' (undefined-variable)
+flappy.py:232:79: E0602: Undefined variable 'K_UP' (undefined-variable)
+flappy.py:234:20: C0103: Variable name "playerVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:235:20: C0103: Variable name "playerFlapped" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:239:8: C0103: Variable name "crashTest" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:254:8: C0103: Variable name "playerMidPos" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:256:12: C0103: Variable name "pipeMidPos" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:263:12: C0103: Variable name "playerIndex" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:264:8: C0103: Variable name "loopIter" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:269:12: C0103: Variable name "playerRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:273:12: C0103: Variable name "playerVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:275:12: C0103: Variable name "playerFlapped" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:278:12: C0103: Variable name "playerRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:280:8: C0103: Variable name "playerHeight" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:284:12: C0103: Variable name "uPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:284:19: C0103: Variable name "lPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:290:12: C0103: Variable name "newPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:302:12: C0103: Variable name "uPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:302:19: C0103: Variable name "lPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:311:8: C0103: Variable name "visibleRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:313:12: C0103: Variable name "visibleRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:315:8: C0103: Variable name "playerSurface" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:188:0: R0912: Too many branches (17/12) (too-many-branches)
+flappy.py:188:0: R0915: Too many statements (70/50) (too-many-statements)
+flappy.py:218:4: W0612: Unused variable 'playerMinVelY' (unused-variable)
+flappy.py:322:0: C0103: Function name "showGameOverScreen" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:322:23: C0103: Argument name "crashInfo" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:322:0: R0914: Too many local variables (16/15) (too-many-locals)
+flappy.py:327:4: C0103: Variable name "playerHeight" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:328:4: C0103: Variable name "playerVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:329:4: C0103: Variable name "playerAccY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:330:4: C0103: Variable name "playerRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:331:4: C0103: Variable name "playerVelRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:335:4: C0103: Variable name "upperPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:335:16: C0103: Variable name "lowerPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:344:29: E0602: Undefined variable 'QUIT' (undefined-variable)
+flappy.py:344:52: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:344:77: E0602: Undefined variable 'K_ESCAPE' (undefined-variable)
+flappy.py:347:29: E0602: Undefined variable 'KEYDOWN' (undefined-variable)
+flappy.py:347:42: R1714: Consider merging these comparisons with 'in' by using 'event.key in (K_SPACE, K_UP)'. Use a set instead if elements are hashable. (consider-using-in)
+flappy.py:347:55: E0602: Undefined variable 'K_SPACE' (undefined-variable)
+flappy.py:347:79: E0602: Undefined variable 'K_UP' (undefined-variable)
+flappy.py:357:12: C0103: Variable name "playerVelY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:362:16: C0103: Variable name "playerRot" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:367:12: C0103: Variable name "uPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:367:19: C0103: Variable name "lPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:377:8: C0103: Variable name "playerSurface" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:385:0: C0103: Function name "playerShm" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:385:14: C0103: Argument name "playerShm" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:385:14: W0621: Redefining name 'playerShm' from outer scope (line 385) (redefined-outer-name)
+flappy.py:396:0: C0103: Function name "getRandomPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:399:4: C0103: Variable name "gapY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:400:4: C0103: Variable name "gapY" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:401:4: C0103: Variable name "pipeHeight" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:402:4: C0103: Variable name "pipeX" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:410:0: C0103: Function name "showScore" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:412:4: C0103: Variable name "scoreDigits" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:413:4: C0103: Variable name "totalWidth" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:416:8: C0103: Variable name "totalWidth" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:418:4: C0103: Variable name "Xoffset" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:422:8: C0103: Variable name "Xoffset" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:425:0: C0103: Function name "checkCrash" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:425:23: C0103: Argument name "upperPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:425:35: C0103: Argument name "lowerPipes" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:425:0: R0914: Too many local variables (16/15) (too-many-locals)
+flappy.py:427:4: C0103: Variable name "pi" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:432:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+flappy.py:436:8: C0103: Variable name "playerRect" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:438:8: C0103: Variable name "pipeW" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:439:8: C0103: Variable name "pipeH" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:441:12: C0103: Variable name "uPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:441:19: C0103: Variable name "lPipe" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:443:12: C0103: Variable name "uPipeRect" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:444:12: C0103: Variable name "lPipeRect" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:447:12: C0103: Variable name "pHitMask" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:448:12: C0103: Variable name "uHitmask" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:449:12: C0103: Variable name "lHitmask" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:452:12: C0103: Variable name "uCollide" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:453:12: C0103: Variable name "lCollide" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:460:0: C0103: Function name "pixelCollision" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:467:4: C0103: Variable name "x1" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:467:8: C0103: Variable name "y1" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:468:4: C0103: Variable name "x2" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:468:8: C0103: Variable name "y2" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:470:8: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:471:12: C0103: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:476:0: C0103: Function name "getHitmask" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:479:8: C0103: Variable name "x" doesn't conform to snake_case naming style (invalid-name)
+flappy.py:481:12: C0103: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+
+
+
+
+
+
+Interpretation:
+
+1)Trailing whitespaces: Misuse of storage by introducing redundant white spaces
+2)Bad indentation : Proper indentation was not observed in line 391
+3)Variable Name:Standard Convention of Camel-Case was not observed for almost all variables which lead to this huge error dialogue
+4)Few Undefined Variables were used
+5)From line 188 more branching than standard were introduced leading to messy code
+6)unnecessary else in line 432 since we used return in above line so it doesn't do anything
+7)Standard Function Naming convention of Snake_case was not observed for few functions
+
+Overall quality of code was pretty poor
+
